@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SpeakingAlarm
 //
-//  Created by Swapna Gupta on 8/11/19.
+//  Created by Arnav Gupta and SG on 8/11/19.
 //  Copyright © 2019 Gupta. All rights reserved.
 //
 
