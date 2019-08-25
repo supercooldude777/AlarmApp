@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5892300AB32001FF03C /* AppDelegate.swift */; };
+		CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */; };
+		CB58B58F2300AB32001FF03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B58D2300AB32001FF03C /* Main.storyboard */; };
+		CB58B5922300AB32001FF03C /* SpeakingAlarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */; };
+		CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5932300AB32001FF03C /* Assets.xcassets */; };
+		CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */; };
+		CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB58B5862300AB32001FF03C /* SpeakingAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB58B5892300AB32001FF03C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		CB58B58E2300AB32001FF03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB58B5912300AB32001FF03C /* SpeakingAlarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeakingAlarm.xcdatamodel; sourceTree = "<group>"; };
+		CB58B5932300AB32001FF03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB58B5962300AB32001FF03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB58B5982300AB32001FF03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB58B5832300AB32001FF03C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB58B57D2300AB31001FF03C = {
+			isa = PBXGroup;
+			children = (
+				CB58B5882300AB32001FF03C /* SpeakingAlarm */,
+				CB58B5872300AB32001FF03C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB58B5872300AB32001FF03C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB58B5862300AB32001FF03C /* SpeakingAlarm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB58B5882300AB32001FF03C /* SpeakingAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				CB58B5892300AB32001FF03C /* AppDelegate.swift */,
+				CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */,
+				CB58B58D2300AB32001FF03C /* Main.storyboard */,
+				CB58B5932300AB32001FF03C /* Assets.xcassets */,
+				CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */,
+				CB58B5982300AB32001FF03C /* Info.plist */,
+				CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */,
+				CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */,
+			);
+			path = SpeakingAlarm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB58B5852300AB32001FF03C /* SpeakingAlarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB58B59B2300AB32001FF03C /* Build configuration list for PBXNativeTarget "SpeakingAlarm" */;
+			buildPhases = (
+				CB58B5822300AB32001FF03C /* Sources */,
+				CB58B5832300AB32001FF03C /* Frameworks */,
+				CB58B5842300AB32001FF03C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeakingAlarm;
+			productName = SpeakingAlarm;
+			productReference = CB58B5862300AB32001FF03C /* SpeakingAlarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB58B57E2300AB31001FF03C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Gupta;
+				TargetAttributes = {
+					CB58B5852300AB32001FF03C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CB58B5812300AB31001FF03C /* Build configuration list for PBXProject "SpeakingAlarm" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB58B57D2300AB31001FF03C;
+			productRefGroup = CB58B5872300AB32001FF03C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB58B5852300AB32001FF03C /* SpeakingAlarm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB58B5842300AB32001FF03C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */,
+				CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */,
+				CB58B58F2300AB32001FF03C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB58B5822300AB32001FF03C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB58B5922300AB32001FF03C /* SpeakingAlarm.xcdatamodeld in Sources */,
+				CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */,
+				CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */,
+				CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB58B58D2300AB32001FF03C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB58B58E2300AB32001FF03C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB58B5962300AB32001FF03C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB58B5992300AB32001FF03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB58B59A2300AB32001FF03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB58B59C2300AB32001FF03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpeakingAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gupta.SpeakingAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB58B59D2300AB32001FF03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpeakingAlarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gupta.SpeakingAlarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB58B5812300AB31001FF03C /* Build configuration list for PBXProject "SpeakingAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB58B5992300AB32001FF03C /* Debug */,
+				CB58B59A2300AB32001FF03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB58B59B2300AB32001FF03C /* Build configuration list for PBXNativeTarget "SpeakingAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB58B59C2300AB32001FF03C /* Debug */,
+				CB58B59D2300AB32001FF03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB58B5912300AB32001FF03C /* SpeakingAlarm.xcdatamodel */,
+			);
+			currentVersion = CB58B5912300AB32001FF03C /* SpeakingAlarm.xcdatamodel */;
+			path = SpeakingAlarm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CB58B57E2300AB31001FF03C /* Project object */;
+}
