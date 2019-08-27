@@ -32,6 +32,14 @@ class ViewController: UIViewController {
         newAlarm.name = name
         newAlarm.alarmID = UUID().uuidString
         
+        let date = timePicker.date
+        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+        let hour = components.hour!
+        let minute = components.minute!
+        
+        newAlarm.hour = Int16(hour)
+        newAlarm.minute = Int16(minute)
+        
         if let uniqueId = newAlarm.alarmID {
             print("The alarmID is \(uniqueId)")
         }

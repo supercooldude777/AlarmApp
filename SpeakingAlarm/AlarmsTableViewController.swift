@@ -47,7 +47,7 @@ class AlarmsTableViewController: UITableViewController {
         let alarm = alarms[indexPath.row]
         
         cell.textLabel?.text = alarm.name
-    
+        cell.detailTextLabel?.text = String(alarm.hour) + ":" + String(alarm.minute)
         return cell
     }
     
