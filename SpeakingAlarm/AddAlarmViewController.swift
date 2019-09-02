@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -46,7 +47,23 @@ class ViewController: UIViewController {
         
         do {
             try context.save()
-        } catch let error {
+            let message = "Hey! Wake up!"
+            let content = UNMutableNotificationContent()
+            content.body = message
+            content.sound = UNNotificationSound.default()
+            var dateComponents = DateComponents()
+            dateComponents.hour = hour
+            dateComponents.minute = minute
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents,
+                                                        repeats: true)
+            if let identifier = newAlarm.alarmID {
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                let center = UNUserNotificationCenter.current()
+                center.add(request, withCompletionHandler: nil)
+            }
+                
+            }
+         catch let error {
             print("Could not save because of \(error).")
         }
         
