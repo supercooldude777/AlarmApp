@@ -14,6 +14,8 @@
 		CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5932300AB32001FF03C /* Assets.xcassets */; };
 		CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */; };
 		CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */; };
+		CB58B5B423249FCD001FF03C /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5B323249FCD001FF03C /* 7.m4a */; };
+		CB58B5B6232DE839001FF03C /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5B5232DE839001FF03C /* RecordAudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CB58B5962300AB32001FF03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB58B5982300AB32001FF03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
+		CB58B5B323249FCD001FF03C /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.m4a; sourceTree = "<group>"; };
+		CB58B5B5232DE839001FF03C /* RecordAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		CB58B57D2300AB31001FF03C = {
 			isa = PBXGroup;
 			children = (
+				CB58B5B323249FCD001FF03C /* 7.m4a */,
 				CB58B5882300AB32001FF03C /* SpeakingAlarm */,
 				CB58B5872300AB32001FF03C /* Products */,
 			);
@@ -66,6 +71,7 @@
 				CB58B5982300AB32001FF03C /* Info.plist */,
 				CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */,
 				CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */,
+				CB58B5B5232DE839001FF03C /* RecordAudioViewController.swift */,
 			);
 			path = SpeakingAlarm;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB58B5B423249FCD001FF03C /* 7.m4a in Resources */,
 				CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */,
 				CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */,
 				CB58B58F2300AB32001FF03C /* Main.storyboard in Resources */,
@@ -143,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB58B5922300AB32001FF03C /* SpeakingAlarm.xcdatamodeld in Sources */,
+				CB58B5B6232DE839001FF03C /* RecordAudioViewController.swift in Sources */,
 				CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */,
 				CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */,
 				CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */,
