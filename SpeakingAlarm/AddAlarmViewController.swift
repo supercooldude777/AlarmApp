@@ -99,23 +99,23 @@ class ViewController: UIViewController {
     // }
     
     func startRecording() {
-        recordingSession = AVAudioSession.sharedInstance()
-        
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.loadRecordingUI()
-                    } else {
-                        self.loadFailUI()
-                    }
-                }
-            }
-        } catch {
-            self.loadFailUI()
-        }
+//        recordingSession = AVAudioSession.sharedInstance()
+//
+//        do {
+//            try recordingSession.setCategory(.playAndRecord, mode: .default)
+//            try recordingSession.setActive(true)
+//            recordingSession.requestRecordPermission() { [unowned self] allowed in
+//                DispatchQueue.main.async {
+//                    if allowed {
+//                        self.loadRecordingUI()
+//                    } else {
+//                        self.loadFailUI()
+//                    }
+//                }
+//            }
+//        } catch {
+//            self.loadFailUI()
+//        }
     }
 
 }

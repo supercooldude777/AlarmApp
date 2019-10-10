@@ -24,6 +24,7 @@ class AlarmsTableViewController: UITableViewController {
     
         do {
             alarms = try context.fetch(fetchRequest)
+            print ("# of alarms: \(alarms.count).")
         } catch let error {
             print("Could not fetch because of error: \(error).")
         }
