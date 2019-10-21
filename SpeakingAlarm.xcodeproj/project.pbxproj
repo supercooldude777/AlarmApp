@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47371C0F235D3C5C00775747 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 47371C0E235D3C5C00775747 /* .gitignore */; };
 		CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5892300AB32001FF03C /* AppDelegate.swift */; };
 		CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */; };
 		CB58B58F2300AB32001FF03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B58D2300AB32001FF03C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47371C0E235D3C5C00775747 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CB58B5862300AB32001FF03C /* SpeakingAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB58B5892300AB32001FF03C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		CB58B57D2300AB31001FF03C = {
 			isa = PBXGroup;
 			children = (
+				47371C0E235D3C5C00775747 /* .gitignore */,
 				CB58B5B323249FCD001FF03C /* 7.m4a */,
 				CB58B5882300AB32001FF03C /* SpeakingAlarm */,
 				CB58B5872300AB32001FF03C /* Products */,
@@ -135,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47371C0F235D3C5C00775747 /* .gitignore in Resources */,
 				CB58B5B423249FCD001FF03C /* 7.m4a in Resources */,
 				CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */,
 				CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */,
