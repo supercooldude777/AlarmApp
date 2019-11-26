@@ -11,7 +11,7 @@ import CoreData
 import UserNotifications
 import AVFoundation
 
-class ViewController: UIViewController {
+class AddAlarmViewController: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var timePicker: UIDatePicker!
@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         if let uniqueId = newAlarm.alarmID {
             print("The alarmID is \(uniqueId)")
         }
+        
+        
         
         do {
             try context.save()
@@ -90,6 +92,10 @@ class ViewController: UIViewController {
             print("failed with error: \(error)")
         }
         
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 
