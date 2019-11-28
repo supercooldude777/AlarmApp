@@ -22,10 +22,6 @@ class AddAlarmViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_sender: UIBarButtonItem) {
-        print("The save button was tapped")
-        
-        // let time = timePicker. (FINISH!)
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -41,12 +37,6 @@ class AddAlarmViewController: UIViewController {
         
         newAlarm.hour = Int16(hour)
         newAlarm.minute = Int16(minute)
-        
-        if let uniqueId = newAlarm.alarmID {
-            print("The alarmID is \(uniqueId)")
-        }
-        
-        
         
         do {
             try context.save()
@@ -66,7 +56,7 @@ class AddAlarmViewController: UIViewController {
                 center.add(request, withCompletionHandler: nil)
             }
                 
-            }
+        }
             
          catch let error {
             print("Could not save because of \(error).")

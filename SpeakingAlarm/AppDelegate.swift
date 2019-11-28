@@ -29,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                         }
         })
         // Override point for customization after application launch.
+        
+        // Set UNUserNotificationCenterDelegate
+        center.delegate = self
         return true
     }
 
@@ -103,3 +106,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// Conform to UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+           willPresent notification: UNNotification,
+           withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler ( [.alert, .badge, .sound] )
+    }
+
+}
