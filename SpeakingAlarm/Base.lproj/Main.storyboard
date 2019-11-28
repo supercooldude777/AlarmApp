@@ -50,25 +50,25 @@
                     <navigationItem key="navigationItem" title="Alarms" id="7oR-wn-QUH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LPN-ke-lg6">
                             <connections>
-                                <segue destination="M2f-Bh-8cM" kind="presentation" id="8pJ-yx-Our"/>
+                                <segue destination="M2f-Bh-8cM" kind="presentation" modalPresentationStyle="fullScreen" id="8pJ-yx-Our"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCT-hr-aBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-296.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-321" y="133"/>
         </scene>
         <!--Create Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddAlarmViewController" customModule="SpeakingAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okc-H8-rYl">
-                                <rect key="frame" x="20" y="92" width="100" height="21"/>
+                                <rect key="frame" x="20" y="80" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pkm-OJ-7FO"/>
                                 </constraints>
@@ -77,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-Mz-voe">
-                                <rect key="frame" x="20" y="122" width="335" height="30"/>
+                                <rect key="frame" x="20" y="110" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FhY-21-jzn"/>
                                 </constraints>
@@ -85,7 +85,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-Df-GXS">
-                                <rect key="frame" x="0.0" y="217" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="205" width="375" height="182"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-AF-dZR">
                                 <rect key="frame" x="116" y="441" width="148" height="113"/>
@@ -172,7 +172,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2f-Bh-8cM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cD5-0t-XLM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

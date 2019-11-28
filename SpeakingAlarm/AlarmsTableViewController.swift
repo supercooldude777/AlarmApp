@@ -15,6 +15,7 @@ class AlarmsTableViewController: UITableViewController {
     var alarms = [Alarm]()
 
     override func viewWillAppear(_ animated: Bool) {
+        print("I am inside - table view will appear.")
         super.viewWillAppear(animated)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
