@@ -44,7 +44,7 @@ class AddAlarmViewController: UIViewController {
             let content = UNMutableNotificationContent()
             content.body = message
             //content.sound = UNNotificationSound.default()
-            content.sound = UNNotificationSound.init(named: "7.m4a")
+            content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue: "7.m4a"))
             var dateComponents = DateComponents()
             dateComponents.hour = hour
             dateComponents.minute = minute

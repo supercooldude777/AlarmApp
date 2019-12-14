@@ -19,29 +19,35 @@ class RecordAudioViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Test"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Record", style: .plain, target: nil, action: nil)
+        // navigationItem.backBarButtonItem = UIBarButtonItem(title: "Record", style: .plain, target: nil, action: nil)
         
         recordingSession = AVAudioSession.sharedInstance()
         
         do {
-//            try recordingSession.setCategory(.playAndRecord, mode: .default)
-//            try recordingSession.setActive(true)
-//            recordingSession.requestRecordPermission() { [unowned self] allowed in
-//                DispatchQueue.main.async {
-//                    if allowed {
-//                        self.loadRecordingUI()
-//                    } else {
-//                        self.loadFailUI()
-//                    }
-//                }
-//            }
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        self.loadRecordingUI()
+                    } else {
+                        self.loadFailUI()
+                    }
+                }
+            }
     } catch {
         self.loadFailUI()
     }
 }
     func loadRecordingUI() {
+        print("loAD recording UI")
     }
     
     func loadFailUI() {
+        print("load failed! :(")
+    }
+    
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
 }

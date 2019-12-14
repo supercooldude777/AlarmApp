@@ -88,12 +88,12 @@
                                 <rect key="frame" x="0.0" y="205" width="375" height="182"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-AF-dZR">
-                                <rect key="frame" x="116" y="441" width="148" height="113"/>
+                                <rect key="frame" x="113" y="523" width="148" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
-                                    <segue destination="sp7-mP-L6o" kind="presentation" id="1jZ-ix-dO5"/>
+                                    <segue destination="D8r-im-i1l" kind="presentation" modalPresentationStyle="fullScreen" id="1jZ-ix-dO5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,20 +133,43 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="132.68365817091455"/>
         </scene>
-        <!--Record Audio View Controller-->
+        <!--Record Audio-->
         <scene sceneID="WPb-ac-20J">
             <objects>
                 <viewController id="sp7-mP-L6o" customClass="RecordAudioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6S-qX-wfg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-U1-Zhv">
+                                <rect key="frame" x="16" y="289" width="335" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFY-IN-coG">
+                                <rect key="frame" x="26" y="222" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bSp-Zh-zSw"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Record Audio" id="dpQ-JJ-rR1">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="LmM-wc-EfZ">
+                            <connections>
+                                <action selector="cancelTapped:" destination="sp7-mP-L6o" id="ADw-HG-Wzb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="nVP-Uz-tMP"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t55-We-ZcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="134"/>
+            <point key="canvasLocation" x="3036" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xni-JD-oL1">
@@ -183,6 +206,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4o-0q-ooy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="475.19999999999999" y="133.13343328335833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6mH-if-mZ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D8r-im-i1l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QRQ-j4-dsN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sp7-mP-L6o" kind="relationship" relationship="rootViewController" id="00h-U7-lKt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXA-Ud-BRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096.8000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
