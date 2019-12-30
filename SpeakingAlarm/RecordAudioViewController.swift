@@ -11,16 +11,22 @@ import UIKit
 import AVFoundation
 
 
-class RecordAudioViewController: UIViewController {
+class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer!
+    
+    @IBOutlet var recordButton: UIButton!
+    @IBOutlet var playButton: UIButton!
     
     override func viewDidLoad() {
+        print("I am being called!")
         super.viewDidLoad()
-        
-        title = "Test"
-        // navigationItem.backBarButtonItem = UIBarButtonItem(title: "Record", style: .plain, target: nil, action: nil)
-        
+        self.setupView()
+    }
+
+    func setupView() {
         recordingSession = AVAudioSession.sharedInstance()
         
         do {
@@ -31,16 +37,21 @@ class RecordAudioViewController: UIViewController {
                     if allowed {
                         self.loadRecordingUI()
                     } else {
-                        self.loadFailUI()
+                        // failed to record
                     }
                 }
             }
-    } catch {
-        self.loadFailUI()
+        } catch {
+            // failed to record
+        }
     }
-}
+    
     func loadRecordingUI() {
-        print("loAD recording UI")
+        recordButton.isEnabled = true
+        playButton.isEnabled = false
+        // recordButton.setTitle("Tap to Record", for: .normal)
+        // recordButton.addTarget(self, action: #selector(recordAudioButtonTapped), for: .touchUpInside)
+        // view.addSubview(recordButton)
     }
     
     func loadFailUI() {
@@ -49,5 +60,86 @@ class RecordAudioViewController: UIViewController {
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func recordTapped(_ sender: UIButton) {
+        if audioRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
+    }
+    
+    @IBAction func playTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.text == "Play"){
+            recordButton.isEnabled = false
+            sender.setTitle("Stop", for: .normal)
+            preparePlayer()
+            audioPlayer.play()
+        } else {
+            audioPlayer.stop()
+            sender.setTitle("Play", for: .normal)
+        }
+    }
+    
+    func preparePlayer() {
+        var error: NSError?
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: getFileURL() as URL)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 10.0
+        }
+    }
+    
+    func startRecording() {
+        let audioFilename = getFileURL()
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+            recordButton.setTitle("Tap to Stop", for: .normal)
+            playButton.isEnabled = false
+        } catch {
+            finishRecording(success: false)
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    func getFileURL() -> URL {
+        let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        return path as URL
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+        
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
+        }
+        
+        playButton.isEnabled = true
+        recordButton.isEnabled = true
     }
 }

@@ -136,24 +136,40 @@
         <!--Record Audio-->
         <scene sceneID="WPb-ac-20J">
             <objects>
-                <viewController id="sp7-mP-L6o" customClass="RecordAudioViewController" sceneMemberID="viewController">
+                <viewController id="sp7-mP-L6o" customClass="RecordAudioViewController" customModule="SpeakingAlarm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6S-qX-wfg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-U1-Zhv">
-                                <rect key="frame" x="16" y="289" width="335" height="34"/>
+                                <rect key="frame" x="16" y="170" width="335" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFY-IN-coG">
-                                <rect key="frame" x="26" y="222" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFY-IN-coG">
+                                <rect key="frame" x="16" y="120" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paa-Ua-muU">
+                                <rect key="frame" x="172" y="448" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="sp7-mP-L6o" eventType="touchUpInside" id="eE1-wp-lMd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M22-u4-KMP">
+                                <rect key="frame" x="103" y="308" width="168" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tap to Record"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="sp7-mP-L6o" eventType="touchUpInside" id="0Gy-YX-umq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bSp-Zh-zSw"/>
@@ -166,6 +182,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="nVP-Uz-tMP"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="playButton" destination="paa-Ua-muU" id="3Gs-tU-Y55"/>
+                        <outlet property="recordButton" destination="M22-u4-KMP" id="cOC-qJ-HS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t55-We-ZcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
