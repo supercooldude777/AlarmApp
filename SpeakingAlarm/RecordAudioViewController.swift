@@ -78,6 +78,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
             audioPlayer.play()
         } else {
             audioPlayer.stop()
+            recordButton.isEnabled = true
             sender.setTitle("Play", for: .normal)
         }
     }
