@@ -143,4 +143,46 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         playButton.isEnabled = true
         recordButton.isEnabled = true
     }
+    
+    //MARK: Delegates
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
+        print("Error while recording audio \(error!.localizedDescription)")
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        recordButton.isEnabled = true
+        playButton.setTitle("Play", for: .normal)
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        print("Error while playing audio \(error!.localizedDescription)")
+    }
+    
+    //MARK: To upload video on server
+    
+    func uploadAudioToServer() {
+        /*Alamofire.upload(
+         multipartFormData: { multipartFormData in
+         multipartFormData.append(getFileURL(), withName: "audio.m4a")
+         },
+         to: "https://yourServerLink",
+         encodingCompletion: { encodingResult in
+         switch encodingResult {
+         case .success(let upload, _, _):
+         upload.responseJSON { response in
+         Print(response)
+         }
+         case .failure(let encodingError):
+         print(encodingError)
+         }
+         })*/
+    }
+    
 }
