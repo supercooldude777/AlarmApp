@@ -83,6 +83,10 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         }
     }
     
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+        
     func preparePlayer() {
         var error: NSError?
         do {

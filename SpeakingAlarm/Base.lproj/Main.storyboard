@@ -180,7 +180,11 @@
                                 <action selector="cancelTapped:" destination="sp7-mP-L6o" id="ADw-HG-Wzb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="nVP-Uz-tMP"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="nVP-Uz-tMP">
+                            <connections>
+                                <action selector="saveTapped:" destination="sp7-mP-L6o" id="iWz-DG-ViU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="playButton" destination="paa-Ua-muU" id="3Gs-tU-Y55"/>
