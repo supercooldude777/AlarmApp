@@ -16,6 +16,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
+    @IBOutlet var nameTextField: UITextField!
     
     @IBOutlet var recordButton: UIButton!
     @IBOutlet var playButton: UIButton!
@@ -82,10 +83,6 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
             sender.setTitle("Play", for: .normal)
         }
     }
-    
-    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
         
     func preparePlayer() {
         var error: NSError?
@@ -140,7 +137,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     }
     
     func getFileURL() -> URL {
-        let path = getSpeakingAlarmDirectory().appendingPathComponent("recording.m4a")
+        let path = getSpeakingAlarmDirectory().appendingPathComponent("recordingtemp.m4a")
         return path as URL
     }
     
@@ -200,4 +197,24 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
          })*/
     }
     
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newRecording = AudioRecording (context: context)
+        newRecording.audioRecordingID = UUID().uuidString
+        newRecording.fileLocation = getFileURL().absoluteString
+        let name = nameTextField.text ?? ""
+        newRecording.name = name
+        
+        do {
+            try context.save()
+                
+        }
+            
+         catch let error {
+            print("Could not save because of \(error).")
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }

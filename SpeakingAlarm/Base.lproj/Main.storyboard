@@ -187,6 +187,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameTextField" destination="EQc-U1-Zhv" id="vua-Qn-InN"/>
                         <outlet property="playButton" destination="paa-Ua-muU" id="3Gs-tU-Y55"/>
                         <outlet property="recordButton" destination="M22-u4-KMP" id="cOC-qJ-HS2"/>
                     </connections>
