@@ -73,8 +73,8 @@
 				CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */,
 				CB58B5982300AB32001FF03C /* Info.plist */,
 				CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */,
-				CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */,
 				CB58B5B5232DE839001FF03C /* RecordAudioViewController.swift */,
+				CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */,
 			);
 			path = SpeakingAlarm;
 			sourceTree = "<group>";

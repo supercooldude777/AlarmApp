@@ -137,7 +137,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     }
     
     func getFileURL() -> URL {
-        let path = getSpeakingAlarmDirectory().appendingPathComponent("recordingtemp.m4a")
+        let path = getSpeakingAlarmDirectory().appendingPathComponent(String(getNewNumber()) + ".m4a")
         return path as URL
     }
     
@@ -177,26 +177,6 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         print("Error while playing audio \(error!.localizedDescription)")
     }
     
-    //MARK: To upload video on server
-    
-    func uploadAudioToServer() {
-        /*Alamofire.upload(
-         multipartFormData: { multipartFormData in
-         multipartFormData.append(getFileURL(), withName: "audio.m4a")
-         },
-         to: "https://yourServerLink",
-         encodingCompletion: { encodingResult in
-         switch encodingResult {
-         case .success(let upload, _, _):
-         upload.responseJSON { response in
-         Print(response)
-         }
-         case .failure(let encodingError):
-         print(encodingError)
-         }
-         })*/
-    }
-    
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -217,4 +197,9 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         }
         dismiss(animated: true, completion: nil)
     }
+
+    func getNewNumber() -> String {
+     return UUID().uuidString
+    }
 }
+
