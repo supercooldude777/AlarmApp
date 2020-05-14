@@ -11,11 +11,55 @@ import CoreData
 import UserNotifications
 import AVFoundation
 
-class AddAlarmViewController: UIViewController {
+class AddAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var audioRecordings = [AudioRecording]()
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var timePicker: UIDatePicker!
 
+    @IBOutlet weak var audioPicker: UIPickerView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("I am inside - table view will appear.")
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = AudioRecording.fetchRequest() as NSFetchRequest<AudioRecording>
+    
+        do {
+            audioRecordings = try context.fetch(fetchRequest)
+            print ("# of audioRecordings: \(audioRecordings.count).")
+        } catch let error {
+            print("Could not fetch because of error: \(error).")
+        }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let ar = audioRecordings[row]
+        return ar.name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AudioRecording")
+        var count = 0
+        do {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            count = try context.count(for: fetchRequest)
+            print(count)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return count
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
