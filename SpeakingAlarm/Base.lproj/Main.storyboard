@@ -76,8 +76,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Audio File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtG-OR-L1h">
-                                <rect key="frame" x="20" y="369" width="100" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtG-OR-L1h">
+                                <rect key="frame" x="20" y="423" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cmA-hp-0Qn"/>
                                 </constraints>
@@ -94,38 +94,49 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-Df-GXS">
-                                <rect key="frame" x="0.0" y="167" width="375" height="182"/>
+                                <rect key="frame" x="17" y="160" width="340" height="130"/>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9M-5c-X0I">
-                                <rect key="frame" x="37" y="416" width="301" height="159"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ujy-dv-CYm"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LG4-At-DPD"/>
-                                </connections>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-AF-dZR">
-                                <rect key="frame" x="113" y="591" width="148" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-AF-dZR">
+                                <rect key="frame" x="113" y="600" width="148" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Cfu-e8-OPL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <segue destination="D8r-im-i1l" kind="presentation" modalPresentationStyle="fullScreen" id="1jZ-ix-dO5"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9M-5c-X0I">
+                                <rect key="frame" x="72" y="464" width="230" height="128"/>
+                                <viewLayoutGuide key="safeArea" id="4si-Rq-Ql9"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ujy-dv-CYm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LG4-At-DPD"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VJb-AF-dZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="3og-ty-g4r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="okc-H8-rYl" secondAttribute="trailing" constant="255" id="4wi-1W-7NQ"/>
                             <constraint firstItem="s2L-Mz-voe" firstAttribute="top" secondItem="okc-H8-rYl" secondAttribute="bottom" constant="9" id="5UH-RV-4s8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VJb-AF-dZR" secondAttribute="bottom" constant="53" id="Bjl-QY-xtk"/>
                             <constraint firstItem="VLL-Df-GXS" firstAttribute="top" secondItem="s2L-Mz-voe" secondAttribute="bottom" constant="65" id="CkJ-FF-07i"/>
                             <constraint firstItem="okc-H8-rYl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G1H-HJ-DR3"/>
                             <constraint firstItem="VLL-Df-GXS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GcL-jU-5hd"/>
+                            <constraint firstItem="vtG-OR-L1h" firstAttribute="trailing" secondItem="okc-H8-rYl" secondAttribute="trailing" id="IIC-O3-v8Z"/>
                             <constraint firstItem="okc-H8-rYl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="JPb-VR-2Oy"/>
+                            <constraint firstItem="d9M-5c-X0I" firstAttribute="top" secondItem="vtG-OR-L1h" secondAttribute="bottom" constant="42" id="VZz-74-p8y"/>
                             <constraint firstItem="okc-H8-rYl" firstAttribute="leading" secondItem="s2L-Mz-voe" secondAttribute="leading" id="YHn-2c-1Cd"/>
+                            <constraint firstItem="VJb-AF-dZR" firstAttribute="centerX" secondItem="d9M-5c-X0I" secondAttribute="centerX" id="cAa-gd-UEQ"/>
+                            <constraint firstItem="VJb-AF-dZR" firstAttribute="top" secondItem="d9M-5c-X0I" secondAttribute="bottom" constant="8" id="dDB-Yq-WxN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VLL-Df-GXS" secondAttribute="bottom" constant="280" id="iWW-ZH-aJs"/>
                             <constraint firstItem="s2L-Mz-voe" firstAttribute="centerX" secondItem="VLL-Df-GXS" secondAttribute="centerX" id="igd-BZ-JaQ"/>
+                            <constraint firstItem="vtG-OR-L1h" firstAttribute="leading" secondItem="s2L-Mz-voe" secondAttribute="leading" id="jpp-FI-R2X"/>
+                            <constraint firstItem="vtG-OR-L1h" firstAttribute="top" secondItem="VLL-Df-GXS" secondAttribute="bottom" constant="36" id="jrh-bV-doq"/>
                             <constraint firstAttribute="trailing" secondItem="VLL-Df-GXS" secondAttribute="trailing" id="lEr-jQ-yw0"/>
+                            <constraint firstItem="VJb-AF-dZR" firstAttribute="centerX" secondItem="VLL-Df-GXS" secondAttribute="centerX" id="pAo-m8-GL6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
