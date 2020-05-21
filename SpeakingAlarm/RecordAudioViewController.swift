@@ -181,7 +181,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let newRecording = AudioRecording (context: context)
+        let newRecording = AudioRecording(context: context)
         newRecording.audioRecordingID = UUID().uuidString
         newRecording.fileLocation = getFileURL().absoluteString
         let name = nameTextField.text ?? ""

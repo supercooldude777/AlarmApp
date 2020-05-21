@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		47371C0F235D3C5C00775747 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 47371C0E235D3C5C00775747 /* .gitignore */; };
+		47402007247620B700CB21BF /* SpeakingAlarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */; };
 		CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5892300AB32001FF03C /* AppDelegate.swift */; };
 		CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B58B2300AB32001FF03C /* AddAlarmViewController.swift */; };
 		CB58B58F2300AB32001FF03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B58D2300AB32001FF03C /* Main.storyboard */; };
-		CB58B5922300AB32001FF03C /* SpeakingAlarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB58B5902300AB32001FF03C /* SpeakingAlarm.xcdatamodeld */; };
 		CB58B5942300AB32001FF03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5932300AB32001FF03C /* Assets.xcassets */; };
 		CB58B5972300AB32001FF03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB58B5952300AB32001FF03C /* LaunchScreen.storyboard */; };
 		CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58B59E2300C82C001FF03C /* AlarmsTableViewController.swift */; };
@@ -153,10 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB58B5922300AB32001FF03C /* SpeakingAlarm.xcdatamodeld in Sources */,
 				CB58B5B6232DE839001FF03C /* RecordAudioViewController.swift in Sources */,
 				CB58B59F2300C82C001FF03C /* AlarmsTableViewController.swift in Sources */,
 				CB58B58C2300AB32001FF03C /* AddAlarmViewController.swift in Sources */,
+				47402007247620B700CB21BF /* SpeakingAlarm.xcdatamodeld in Sources */,
 				CB58B58A2300AB32001FF03C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QBKCRK725;
 				INFOPLIST_FILE = SpeakingAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Gupta.SpeakingAlarm;
@@ -309,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QBKCRK725;
 				INFOPLIST_FILE = SpeakingAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Gupta.SpeakingAlarm;
